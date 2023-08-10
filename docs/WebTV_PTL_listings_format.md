@@ -2,7 +2,9 @@
 
 Author: wtv-411
 
-Last updated: August 10th, 2023
+Refined and converted to Markdown on August 10, 2023. Originally written as a text file that was last updated on June 17, 2023
+
+Last updated: August 10, 2023
 
 ----
 
@@ -75,12 +77,12 @@ Segment format:
 | Size | Description |
 |---|---|
 | 3 bytes | Pointer to program title and description in string table (block 0x07) |
-| 2 bytes | A [bitfield](#Program_bitfield) describing characteristics of a program |
+| 2 bytes | A [bitfield](#program-bitfield) describing characteristics of a program |
 | 2 bytes | An (average) duration for a show or movie |
 | 1 byte | Unknown. Usually null, although this has been observed to carry other values |
 | 1 byte | Value representing the year a movie was released. It is an integer representing the number of years after the year 1850. This value is 0 for any program that isn't a movie. |
 | 4 bytes | ??? |
-| 1 byte | [Category information bitfield](#Category_bitfield). Puts the program into a category and corresponding subcategory. If the byte is 0xFF, then it likely has no category |
+| 1 byte | [Category information bitfield](#category-bitfield). Puts the program into a category and corresponding subcategory. If the byte is 0xFF, then it likely has no category |
 
 ### ID 0x03 (Schedule)
 * Stores schedule data for EPG.
@@ -96,7 +98,7 @@ Segment format:
 | 2 bytes | Current position of the program on the channel in minutes. This is relative to the start date specified in the PTL starting at midnight at the user's local time, and this value increases in the next segment (if any) by an amount specified in the following 2 bytes. |
 | 2 bytes | Duration for a program in minutes |
 | 1 byte | (Version 3 only) Unknown. Usually null |
-| 1 byte | A [bitfield for scheduled programs](#Schedule_bitfield) that toggles certain characteristics of the specific airing of a program. Values observed for this byte include 0x44, 0x04, 0x0c, and 0x40 |
+| 1 byte | A [bitfield for scheduled programs](#schedule-bitfield) that toggles certain characteristics of the specific airing of a program. Values observed for this byte include 0x44, 0x04, 0x0c, and 0x40 |
 
 ### ID 0x04 (TV Sites)
 * Stores segments identifying TV Sites for participating programs.
